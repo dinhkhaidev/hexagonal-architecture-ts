@@ -17,9 +17,9 @@ export const CategoryUpdateSchema = z.object({
   status: z.nativeEnum(ModelCategory).optional(),
 });
 export type CategoryUpdateDTO = z.infer<typeof CategoryUpdateSchema>;
-export const CategoryCondDTO = z.object({
+export const CategoryCondSchema = z.object({
   name: z.string().min(2).max(100).optional(),
   parentId: z.string().uuid().nullable().optional(),
   status: z.nativeEnum(ModelCategory).optional(),
 });
-export type CategoryCondDTO = z.infer<typeof CategoryCondDTO>;
+export type CategoryCondDTO = z.infer<typeof CategoryCondSchema>;

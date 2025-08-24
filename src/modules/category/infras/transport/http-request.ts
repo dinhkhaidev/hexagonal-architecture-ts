@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { ICategoryUsecase, IRepository } from "../../interface";
 import {
   CategoryCondDTO,
+  CategoryCondSchema,
   CategoryCreateDTO,
   CategoryCreateSchema,
   CategoryUpdateSchema,
@@ -35,7 +36,7 @@ export class CategoryHttpRequest {
         error: error.message,
       });
     }
-    const cond = CategoryCondDTO.parse(req.query);
+    const cond = CategoryCondSchema.parse(req.query);
     const result = await this.useCase.listCategories(cond, data);
     res.status(200).json({ data: result });
   }
