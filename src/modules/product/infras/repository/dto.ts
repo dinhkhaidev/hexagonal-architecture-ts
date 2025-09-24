@@ -21,7 +21,7 @@ export function initProduct(sequelize: Sequelize) {
         allowNull: false,
       },
       images: {
-        type: DataTypes.JSONB,
+        type: DataTypes.JSON,
         allowNull: true,
       },
       salePrice: {

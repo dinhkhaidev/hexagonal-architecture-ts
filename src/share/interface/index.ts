@@ -22,3 +22,13 @@ export interface ICommandRepository<Entity, UpdateDTO> {
   update(id: string, data: UpdateDTO): Promise<boolean>;
   delete(id: string): Promise<boolean>;
 }
+
+export enum UserRole {
+  ADMIN = "admin",
+  USER = "user",
+}
+
+export interface TokenPayload {
+  sub: string;
+  role: UserRole;
+}

@@ -23,7 +23,7 @@ export function initCategory(sequelize: Sequelize) {
         allowNull: true,
       },
       position: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         allowNull: true,
       },
       parentId: {
